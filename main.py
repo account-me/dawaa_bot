@@ -1,6 +1,9 @@
 import requests
 import telebot
 import json
+from server import server
+
+
 bot_key = "5523731345:AAEB0I6j5yh4PeK8jIBZ3IGHmKCsAcFEqlQ"
 bot = telebot.TeleBot(bot_key)
 
@@ -123,5 +126,5 @@ def reply(message):
           message22 = message22 + txt1
         return bot.reply_to(message, message22, parse_mode='Markdown')
 
-
+server()
 bot.polling()
